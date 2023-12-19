@@ -30,8 +30,6 @@ func _ready():
 		ranks[i].resize(9)
 		files[i].resize(9)
 		boxes[i].resize(9)
-		
-	var b = GridContainer.new()
 	
 	for box_x in 3:
 		for box_y in 3:

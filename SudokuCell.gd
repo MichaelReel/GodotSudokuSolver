@@ -4,13 +4,13 @@ var parent
 var pos
 var groups
 
-func _init(parent, pos, groups):
-	self.parent = parent
-	self.pos = pos
-	self.groups = groups
+func _init(parent_, pos_, groups_):
+	self.parent = parent_
+	self.pos = pos_
+	self.groups = groups_
 
 func _gui_input(event):
-	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT and event.pressed:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		parent.cell_click(pos, self)
 
 func get_possibles():

@@ -12,8 +12,9 @@ func _ready():
 		button.toggle_mode = true
 		add_child(button)
 
-func button_click(text, button):
+func button_click(text: String, button: Button):
 	for b in get_children():
-		if b != button: b.pressed = false
-	if button.pressed: button.pressed = false
+		if b != button: b.set_pressed_no_signal(false)
+	if button.pressed:
+		button.set_pressed_no_signal(false)
 	sudokuGrid.set_value(text)
